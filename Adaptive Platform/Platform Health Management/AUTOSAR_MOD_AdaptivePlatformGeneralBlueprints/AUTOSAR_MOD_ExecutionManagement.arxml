@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>ExecutionManagement</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>ModeDeclarationGroups</SHORT-NAME>
+              <ELEMENTS>
+                <MODE-DECLARATION-GROUP>
+                  <SHORT-NAME>ProcessStates</SHORT-NAME>
+                  <INTRODUCTION>
+                    <P>
+                      <L-1 L="EN">Mode declaration group for process states.</L-1>
+                    </P>
+                  </INTRODUCTION>
+                  <INITIAL-MODE-REF DEST="MODE-DECLARATION">/AUTOSAR/ExecutionManagement/ModeDeclarationGroups/ProcessStates/Idle</INITIAL-MODE-REF>
+                  <MODE-DECLARATIONS>
+                    <MODE-DECLARATION>
+                      <SHORT-NAME>Idle</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">The Idle Process State shall be the Process State prior to creation of the Process and to resource allocation.</L-2>
+                      </DESC>
+                    </MODE-DECLARATION>
+                    <MODE-DECLARATION>
+                      <SHORT-NAME>Starting</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">The Starting Process State shall apply when the Process has been created and resources have been allocated.</L-2>
+                      </DESC>
+                    </MODE-DECLARATION>
+                    <MODE-DECLARATION>
+                      <SHORT-NAME>Running</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">The Running Process State shall apply to a Reporting Process after it has reported kRunning Execution State to Execution Management.</L-2>
+                      </DESC>
+                    </MODE-DECLARATION>
+                    <MODE-DECLARATION>
+                      <SHORT-NAME>Terminating</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">The Terminating Process State shall apply when Execution Management sent SIGTERM signal to the Process.</L-2>
+                      </DESC>
+                    </MODE-DECLARATION>
+                    <MODE-DECLARATION>
+                      <SHORT-NAME>Terminated</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">The Terminated Process State shall apply after the Process has terminated and the Process resources have been freed.</L-2>
+                      </DESC>
+                    </MODE-DECLARATION>
+                  </MODE-DECLARATIONS>
+                </MODE-DECLARATION-GROUP>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>LifeCycleInfoSets</SHORT-NAME>
+              <ELEMENTS>
+                <LIFE-CYCLE-INFO-SET>
+                  <SHORT-NAME>ProcessStates</SHORT-NAME>
+                  <DEFAULT-LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/draft</DEFAULT-LC-STATE-REF>
+                  <LIFE-CYCLE-INFOS>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF DEST="MODE-DECLARATION">/AUTOSAR/ExecutionManagement/ModeDeclarationGroups/ProcessStates/Idle</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/draft</LC-STATE-REF>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF DEST="MODE-DECLARATION">/AUTOSAR/ExecutionManagement/ModeDeclarationGroups/ProcessStates/Starting</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/draft</LC-STATE-REF>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF DEST="MODE-DECLARATION">/AUTOSAR/ExecutionManagement/ModeDeclarationGroups/ProcessStates/Running</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/draft</LC-STATE-REF>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF DEST="MODE-DECLARATION">/AUTOSAR/ExecutionManagement/ModeDeclarationGroups/ProcessStates/Terminating</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/draft</LC-STATE-REF>
+                    </LIFE-CYCLE-INFO>
+                    <LIFE-CYCLE-INFO>
+                      <LC-OBJECT-REF DEST="MODE-DECLARATION">/AUTOSAR/ExecutionManagement/ModeDeclarationGroups/ProcessStates/Terminated</LC-OBJECT-REF>
+                      <LC-STATE-REF DEST="LIFE-CYCLE-STATE">/AUTOSAR/GenDef/LifeCycleStateDefinitionGroups/AutosarLifeCycleStates/draft</LC-STATE-REF>
+                    </LIFE-CYCLE-INFO>
+                  </LIFE-CYCLE-INFOS>
+                </LIFE-CYCLE-INFO-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
